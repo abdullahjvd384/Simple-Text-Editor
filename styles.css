@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent the whole page from scrolling */
 }
 
 .ad {
@@ -12,12 +13,13 @@ body {
 
 .top-ad {
     width: 100%;
-    height: 100px;
+    height: 100px; /* Adjust height as needed */
 }
 
 .main-container {
     display: flex;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 100px); /* Adjust based on top ad height */
+    overflow: hidden; /* Prevent the whole page from scrolling */
 }
 
 .left-ad, .right-ad {
@@ -27,22 +29,23 @@ body {
 .left-ad {
     height: 100%;
     position: fixed;
-    top: 50px;
+    top: 100px; /* Adjust based on top ad height */
     left: 0;
 }
 
 .right-ad {
     height: 100%;
     position: fixed;
-    top: 50px;
+    top: 100px; /* Adjust based on top ad height */
     right: 0;
 }
 
 .editor-container {
-    margin: 35px 170px;
+    margin: 50px 200px 50px 200px; /* Increased margins */
     flex: 1;
     display: flex;
     flex-direction: column;
+    overflow-y: auto; /* Make the editor container scrollable */
 }
 
 .editor-header {
